@@ -6,4 +6,4 @@
 
 ./src/secret/*
 
-.\src\secret\secret.cpp
+src/secret/secret.cpp
