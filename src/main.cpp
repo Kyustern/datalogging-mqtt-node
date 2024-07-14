@@ -35,7 +35,7 @@ void blink_led(int dval = 100)
 
 void setup_wifi()
 {
-  WiFi.begin(home_ssid, home_password);
+  WiFi.begin(SSID, password);
 
   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED)
@@ -71,12 +71,14 @@ void reconnect()
 // Callback doit être présent pour souscrire a un topic et de prévoir une action
 void callback(char *topic, byte *payload, unsigned int length)
 {
-  Serial.println("-------Nouveau message du broker mqtt-----");
-  Serial.print("Canal:");
-  Serial.println(topic);
-  Serial.print("donnee:");
-  Serial.write(payload, length);
-  Serial.println();
+  switch (topic) {
+  case /* constant-expression */:
+    /* code */
+    break;
+  
+  default:
+    break;
+  }
 
   if (topic == "esp/test/led")
   {

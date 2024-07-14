@@ -4,6 +4,5 @@
 .vscode/launch.json
 .vscode/ipch
 
-./src/secret/*
-
+src/secret/*
 src/secret/secret.cpp
